@@ -1,0 +1,242 @@
+@font-face {
+  font-family: Montserrat;
+  src: url(/Fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+}
+.navigation-bar {
+  font-family: Montserrat;
+}
+nav {
+  height: 40px;
+  background-color: black;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  z-index: 3;
+}
+.high-bar {
+  background-color: black;
+  padding: 10px 20px 5px 20px;
+}
+.low-bar {
+  background-color: black;
+  padding: 5px 20px 10px 20px;
+}
+
+.sidebar-bar {
+  display: none;
+}
+.links-container {
+  font-size: 15px;
+  font-weight: 300;
+  margin-right: 30px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.logo {
+  font-weight: 800;
+  font-size: 30px;
+  margin-right: auto;
+  color: white;
+  padding-left: 40px;
+}
+.nav-buttons {
+  height: 100%;
+  margin-left: 10px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+.nav-buttons a {
+  padding: 10px;
+  margin-left: 15px;
+}
+nav a:hover {
+  background-color: rgba(0, 0, 255, 0.372);
+  font-weight: 700;
+  border-radius: 15px;
+  transition: 0.25s ease-in-out;
+}
+
+#sidebar-active {
+  display: none;
+}
+
+.open-sidebar-button,
+.close-sidebar-button {
+  display: none;
+}
+
+.headline {
+  position: relative;
+}
+
+.headline-image {
+  width: 100%;
+  position: absolute;
+  height: 500px;
+  background-image: url(/Images/Calculus_Blackboard.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(40%);
+  overflow-x: hidden;
+}
+
+.headline-text {
+  font-family: Montserrat;
+  color: white;
+  position: absolute;
+  padding: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: justify;
+  width: 80%;
+}
+.main-headline-text {
+  padding: 20px;
+  text-align: center;
+  font-size: 45px;
+}
+.main-headline-body {
+  text-align: justify;
+  font-size: 15px;
+}
+@media (width <= 768px) {
+  .links-container {
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    margin-right: 0%;
+    top: 0;
+    right: -100%;
+    z-index: 10;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.804);
+    backdrop-filter: blur(2px);
+    transition: 0.5s ease;
+  }
+  .sidebar-bar {
+    display: block;
+    width: 175px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .nav-buttons {
+    box-sizing: border-box;
+    height: auto;
+    width: 60%;
+    padding: 10px 10px;
+    margin-left: 0%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .close-sidebar-button {
+    padding: 4px 5px 1px 5px;
+    margin: 16px 15px 9px 25px;
+    display: block;
+  }
+
+  .open-sidebar-button {
+    position: absolute;
+    padding: 4px 5px 0px 5px;
+    margin: 21px 35px 19px 15px;
+    display: block;
+  }
+  .close-sidebar-button:hover {
+    background-color: rgba(0, 0, 255, 0.372);
+    border-radius: 15%;
+    transition: 0.25s ease-in-out;
+  }
+  .open-sidebar-button:hover {
+    background-color: rgba(0, 0, 255, 0.372);
+    border-radius: 15%;
+    transition: 0.25s ease-in-out;
+  }
+
+  #sidebar-active:checked ~ .links-container {
+    right: 0;
+  }
+  #sidebar-active:checked ~ #overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+  }
+
+  .headline-image {
+    height: 475px;
+  }
+  .main-headline-text {
+    font-size: 40px;
+    padding: 10px;
+  }
+
+  .main-headline-body {
+    font-size: 13px;
+  }
+}
+@media (width <= 550px) {
+  nav {
+    height: 30px;
+  }
+  .open-sidebar-button,
+  .close-sidebar-button {
+    display: block;
+    transform-origin: center;
+    transform: scale(75%);
+  }
+  .open-sidebar-button {
+    margin-right: 20px;
+  }
+  .close-sidebar-button {
+    margin-left: 19px;
+  }
+  .sidebar-bar {
+    top: 9%;
+  }
+  .logo {
+    font-size: 20px;
+    padding: 20px 20px 20px 25px;
+  }
+  .nav-buttons {
+    position: absolute;
+    top: 9%;
+  }
+  .nav-buttons a {
+    font-size: 15px;
+    padding: 5px 15px 5px 15px;
+    margin-left: 5px;
+  }
+  .headline-image {
+    height: 400px;
+  }
+
+  .headline-text {
+    padding: 0px;
+  }
+  .main-headline-text {
+    font-size: 22.5px;
+    padding: 10px;
+  }
+
+  .main-headline-body {
+    font-size: 10px;
+  }
+}
