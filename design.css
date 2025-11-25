@@ -95,7 +95,7 @@ nav a:hover {
   width: 100%;
   position: absolute;
   height: 500px;
-  background-image: url("./Prototype-2/Images/Calculus_Blackboard.jpg");
+  background-image: url(./Prototype-2/Images/Calculus_Blackboard.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   filter: brightness(40%);
@@ -309,6 +309,7 @@ nav a:hover {
     padding: 5px 5%;
   }
 }
+
 
 
 
