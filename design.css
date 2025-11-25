@@ -1,6 +1,6 @@
 @font-face {
   font-family: Montserrat;
-  src: url("Fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
+  src: url(/Fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
 }
 :root {
   --color-1: #03030c;
@@ -95,7 +95,7 @@ nav a:hover {
   width: 100%;
   position: absolute;
   height: 500px;
-  background-image: url(./Prototype-2/Images/Calculus_Blackboard.jpg);
+  background-image: url(/Images/Calculus_Blackboard.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   filter: brightness(40%);
@@ -233,16 +233,24 @@ nav a:hover {
     z-index: 9;
   }
   .headline,
-  .headline-image {
+  .headline-image,
+  .headline-image-overlay {
     height: 475px;
   }
   .main-headline-text {
-    font-size: 40px;
+    font-size: 35px;
     padding: 10px;
   }
-
   .main-headline-body {
     font-size: 13px;
+  }
+  .article-title {
+    font-size: 17.5px;
+    padding: 5px 5%;
+  }
+  .article-body {
+    font-size: 12.5px;
+    padding: 5px 5%;
   }
 }
 @media (width <= 550px) {
@@ -278,10 +286,10 @@ nav a:hover {
     margin-left: 5px;
   }
   .headline,
-  .headline-image {
+  .headline-image,
+  .headline-image-overlay {
     height: 400px;
   }
-
   .headline-text {
     padding: 0px;
   }
@@ -289,9 +297,15 @@ nav a:hover {
     font-size: 22.5px;
     padding: 10px;
   }
-
   .main-headline-body {
     font-size: 10px;
   }
+  .article-title {
+    font-size: 15px;
+    padding: 5px 5%;
+  }
+  .article-body {
+    font-size: 10px;
+    padding: 5px 5%;
+  }
 }
-
