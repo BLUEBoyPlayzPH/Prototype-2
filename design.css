@@ -1,6 +1,6 @@
 @font-face {
   font-family: Montserrat;
-  src: url(/Fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+  src: url("/Prototype-2/Fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
 }
 
 * {
@@ -240,3 +240,4 @@ nav a:hover {
     font-size: 10px;
   }
 }
+
