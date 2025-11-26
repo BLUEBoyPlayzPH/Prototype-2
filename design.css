@@ -12,6 +12,24 @@
   --color-7: #fd8753;
   --color-8: #ffdb97;
 }
+@keyframes load-in1 {
+  0% {
+    left: -20%;
+    opacity: 0%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+@keyframes load-in2 {
+  0% {
+    top: 20%;
+    opacity: 0%;
+  }
+  100% {
+    top: 50%;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -23,6 +41,8 @@ body {
 .navigation-bar {
   font-family: Montserrat;
   position: relative;
+  animation-name: load-in1;
+  animation-duration: 0.75s;
 }
 nav {
   height: 40px;
@@ -124,6 +144,8 @@ nav a:hover {
   text-align: justify;
   width: 80%;
   z-index: 2;
+  animation-name: load-in2;
+  animation-duration: 0.75s;
 }
 .main-headline-text {
   padding: 0px 0px 10px 0px;
