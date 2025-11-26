@@ -1,6 +1,6 @@
 @font-face {
   font-family: Montserrat;
-  src: url("/Prototype-2/Fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
+  src: url("./Fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
 }
 :root {
   --color-1: #03030c;
@@ -308,6 +308,7 @@ nav a:hover {
     padding: 5px 5%;
   }
 }
+
 
 
 
