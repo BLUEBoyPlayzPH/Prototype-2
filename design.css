@@ -40,7 +40,6 @@ body {
 }
 .navigation-bar {
   font-family: Montserrat;
-  position: relative;
   animation-name: load-in1;
   animation-duration: 0.75s;
 }
@@ -95,13 +94,14 @@ nav {
   color: white;
   padding: 10px;
   margin-left: 15px;
+  border-radius: 15px;
+  transition: 0.15s ease-in-out;
 }
 nav a:hover {
   background-color: var(--color-8);
   color: black;
   font-weight: 700;
-  border-radius: 15px;
-  transition: 0.25s ease-in-out;
+  transition: 0.15s ease-in-out;
 }
 #sidebar-active {
   display: none;
@@ -148,14 +148,41 @@ nav a:hover {
   animation-duration: 0.75s;
 }
 .main-headline-text {
-  padding: 0px 0px 10px 0px;
+  padding: 0px 0px 15px 0px;
   text-align: center;
   font-size: 45px;
   font-weight: 800;
 }
 .main-headline-body {
   text-align: justify;
-  font-size: 15px;
+  font-size: 17.5px;
+}
+.headline-button {
+  height: 100px;
+}
+.headline-button-text {
+  display: block;
+  position: absolute;
+  text-align: center;
+  margin-top: 15px;
+  padding: 5px 10px;
+  font-family: Montserrat;
+  text-decoration: none;
+  background-color: var(--color-6);
+  border: 5px solid var(--color-5);
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 15px;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-weight: 500;
+  transition: 0.25s ease;
+}
+.headline-button-text:hover {
+  transition: 0.25s ease;
+  background-color: var(--color-7);
+  border: 5px solid var(--color-6);
+  font-weight: 700;
 }
 .article {
   position: relative;
@@ -163,7 +190,6 @@ nav a:hover {
   height: 300px;
   z-index: 1;
 }
-
 .article-background {
   position: absolute;
 }
@@ -276,6 +302,10 @@ nav a:hover {
   .article-body {
     font-size: 12.5px;
   }
+  .headline-button-text,
+  .headline-button-text:hover {
+    font-size: 17.5px;
+  }
 }
 @media (width <= 550px) {
   nav {
@@ -329,5 +359,9 @@ nav a:hover {
   }
   .article-body {
     font-size: 10px;
+  }
+  .headline-button-text,
+  .headline-button-text:hover {
+    font-size: 15px;
   }
 }
