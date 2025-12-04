@@ -14,20 +14,32 @@
 }
 @keyframes load-in1 {
   0% {
-    left: -20%;
     opacity: 0%;
+    bottom: 100%;
   }
   100% {
-    left: 0%;
+    bottom: 0%;
   }
 }
 @keyframes load-in2 {
   0% {
-    top: 20%;
+    opacity: 0%;
+  }
+  5% {
+    top: 125%;
     opacity: 0%;
   }
   100% {
     top: 50%;
+  }
+}
+@keyframes load-in3 {
+  0% {
+    top: 110%;
+    opacity: 0%;
+  }
+  100% {
+    top: 100%;
   }
 }
 * {
@@ -41,8 +53,6 @@ body {
 }
 .navigation-bar {
   font-family: Montserrat;
-  animation-name: load-in1;
-  animation-duration: 0.75s;
 }
 nav {
   height: 40px;
@@ -114,12 +124,12 @@ nav a:hover {
 .headline {
   position: relative;
   display: block;
-  height: 500px;
+  height: 600px;
 }
 .headline-image {
   width: 100%;
   position: absolute;
-  height: 500px;
+  height: inherit;
   background-image: url("./Images/Calculus_Blackboard.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -128,7 +138,7 @@ nav a:hover {
 .headline-image-overlay {
   position: absolute;
   width: 100%;
-  height: 500px;
+  height: inherit;
   display: block;
   background-image: linear-gradient(#010831cb, #7e1e2fcb);
   backdrop-filter: blur(2px);
@@ -151,7 +161,7 @@ nav a:hover {
 .main-headline-text {
   padding: 0px 0px 15px 0px;
   text-align: center;
-  font-size: 45px;
+  font-size: 60px;
   font-weight: 800;
 }
 .main-headline-body {
@@ -190,20 +200,23 @@ nav a:hover {
   display: block;
   top: 100%;
   transform: translateY(-50%);
-  z-index: 2;
+  z-index: 6;
   fill: var(--color-5);
-  width: 100vw;
-  overflow-x: hidden;
+  width: 110%;
+  right: 0%;
+  animation-name: load-in3;
+  animation-duration: 0.75s;
 }
 .article {
   position: relative;
   display: block;
   height: 450px;
-  z-index: 1;
+  z-index: 5;
 }
 .article-background {
   position: absolute;
   background-color: var(--color-3);
+  right: 0%;
   height: 450px;
   width: 100vw;
 }
@@ -305,10 +318,10 @@ nav a:hover {
   .headline,
   .headline-image,
   .headline-image-overlay {
-    height: 475px;
+    height: 550px;
   }
   .main-headline-text {
-    font-size: 35px;
+    font-size: 50px;
     padding: 0px 0px 10px 0px;
   }
   .main-headline-body {
@@ -329,7 +342,7 @@ nav a:hover {
     font-size: 17.5px;
   }
   #wave {
-    width: 800px;
+    width: 1250px;
     right: 0%;
     overflow-x: hidden;
   }
@@ -369,13 +382,13 @@ nav a:hover {
   .headline,
   .headline-image,
   .headline-image-overlay {
-    height: 400px;
+    height: 500px;
   }
   .headline-text {
     padding: 0px;
   }
   .main-headline-text {
-    font-size: 22.5px;
+    font-size: 40px;
     padding: 0px 0px 10px 0px;
   }
   .main-headline-body {
@@ -392,7 +405,7 @@ nav a:hover {
     font-size: 15px;
   }
   #wave {
-    width: 700px;
+    width: 900px;
   }
   .article,
   .article-background {
