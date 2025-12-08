@@ -30,7 +30,7 @@
     opacity: 0%;
   }
   100% {
-    transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-55%) translateX(-50%);
   }
 }
 @keyframes load-in3 {
@@ -429,3 +429,4 @@ nav {
     height: 375px;
   }
 }
+
